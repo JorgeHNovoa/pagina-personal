@@ -225,9 +225,15 @@ p {
 
 .project-meta {
   margin-bottom: 1rem;
-  display: flex;
   gap: 2rem;
-  flex-wrap: wrap;
+}
+
+.project-meta ul {
+  margin: 1em;
+  margin-left: 1.5em;
+}
+.project-meta li {
+  margin-top: 0.3em;
 }
 
 .project-meta .company,
