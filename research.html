@@ -5,252 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Personal website">
         <title>Jorge Novoa</title>
-        <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem 0;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        h1 {
-            font-size: 1.8rem;
-            margin: 0;
-        }
-
-        h1 a {
-            color: white;
-            text-decoration: none;
-        }
-
-        h1 a:hover {
-            color: white;
-            text-decoration: none;
-        }
-
-        .menu ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 2rem;
-        }
-
-        .menu li {
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .menu li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .menu li a:hover {
-            color: white;
-            text-decoration: none;
-        }
-
-        .menu li:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        main {
-            padding: 3rem 0;
-            flex: 1;
-        }
-
-        .content {
-            background: white;
-            border-radius: 3px;
-            padding: 2rem;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-        }
-              .menu li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .menu li a:hover {
-            color: white;
-            text-decoration: none;
-        }
-
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.5rem;
-        }
-
-        h3 {
-            color: #34495e;
-            margin: 1.5rem 0 0.5rem 0;
-            font-size: 1.3rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-            line-height: 1.7;
-        }
-
-        .research-item {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            border-left: 4px solid #3498db;
-            background: #f8f9fa;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .research-item h4 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .research-item .authors {
-            color: #7f8c8d;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-
-        .research-item .venue {
-            color: #e74c3c;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .research-item .year {
-            color: #95a5a6;
-            font-weight: 500;
-        }
-
-        .research-item .abstract {
-            margin-top: 1rem;
-            padding: 1rem;
-            background: white;
-            border-radius: 4px;
-            border: 1px solid #ecf0f1;
-        }
-
-        .research-item .links {
-            margin-top: 1rem;
-        }
-
-        .research-item .links a {
-            display: inline-block;
-            margin-right: 1rem;
-            padding: 0.3rem 0.8rem;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 3px;
-            font-size: 0.9rem;
-            transition: background 0.3s ease;
-        }
-
-        .research-item .links a:hover {
-            background: #2980b9;
-        }
-
-        .research-section {
-            margin-bottom: 3rem;
-        }
-
-        .research-section h3 {
-            color: #2c3e50;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #bdc3c7;
-        }
-
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: auto;
-        }
-
-        @media (max-width: 768px) {
-            .menu {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .menu ul {
-                margin-top: 1em;
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .menu li {
-                border: 2px solid rgba(255, 255, 255, 0.3);
-                background: rgba(255, 255, 255, 0.1);
-                text-align: center;
-            }
-
-            .menu li:hover {
-                background: rgba(255, 255, 255, 0.2);
-                border-color: rgba(255, 255, 255, 0.5);
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-            
-            .container {
-                padding: 0 15px;
-            }
-            
-            .content {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
         <header>
@@ -269,11 +24,25 @@
         <main>
             <div class="container">
                 <div class="content">
-                    <h2>Research Publications</h2>
-
+                    <h2>Research </h2>
+                    <div class="research-section">
+                        <h3>Research Areas</h3>
+                        <p>My research focuses on the intersection of machine
+                            learning, distributed systems, and data science.
+                            Current areas of interest include:</p>
+                        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                            <li>Machine Learning and Artificial
+                                Intelligence</li>
+                            <li>Distributed Computing and Big Data
+                                Processing</li>
+                            <li>Optimization Algorithms and Performance
+                                Analysis</li>
+                            <li>Real-time Data Stream Processing</li>
+                            <li>Edge Computing and IoT Applications</li>
+                        </ul>
+                    </div>
                     <div class="research-section">
                         <h3>Journal Publications</h3>
-
                         <div class="research-item">
                             <h4>Advanced Machine Learning Techniques for
                                 Predictive Analytics</h4>
@@ -297,91 +66,11 @@
                                 <a href="#">Code</a>
                             </div>
                         </div>
-
-                        <div class="research-item">
-                            <h4>Optimization Algorithms for Large-Scale Data
-                                Processing</h4>
-                            <div class="authors">Jorge Novoa, Ana Lopez</div>
-                            <div class="venue">IEEE Transactions on Data
-                                Science</div>
-                            <div class="year">2023</div>
-                            <div class="abstract">
-                                <strong>Abstract:</strong> We investigate
-                                efficient optimization algorithms for processing
-                                large-scale datasets in distributed computing
-                                environments. Our proposed framework reduces
-                                computational complexity while maintaining high
-                                accuracy in data analysis tasks.
-                            </div>
-                            <div class="links">
-                                <a href="#">PDF</a>
-                                <a href="#">DOI</a>
-                            </div>
-                        </div>
                     </div>
-
                     <div class="research-section">
-                        <h3>Conference Papers</h3>
-
-                        <div class="research-item">
-                            <h4>Real-time Data Stream Processing with Neural
-                                Networks</h4>
-                            <div class="authors">Jorge Novoa, Pedro Martinez,
-                                Sofia Garcia</div>
-                            <div class="venue">International Conference on
-                                Artificial Intelligence (ICAI 2024)</div>
-                            <div class="year">2024</div>
-                            <div class="abstract">
-                                <strong>Abstract:</strong> This work presents a
-                                novel approach to real-time data stream
-                                processing using neural networks. We demonstrate
-                                significant improvements in processing speed and
-                                accuracy compared to existing methods.
-                            </div>
-                            <div class="links">
-                                <a href="#">PDF</a>
-                                <a href="#">Slides</a>
-                                <a href="#">Code</a>
-                            </div>
-                        </div>
-
-                        <div class="research-item">
-                            <h4>Scalable Machine Learning Systems for Edge
-                                Computing</h4>
-                            <div class="authors">Jorge Novoa, Luis Torres</div>
-                            <div class="venue">ACM Symposium on Distributed
-                                Computing (SDC 2023)</div>
-                            <div class="year">2023</div>
-                            <div class="abstract">
-                                <strong>Abstract:</strong> We propose a scalable
-                                architecture for deploying machine learning
-                                models in edge computing environments. Our
-                                system achieves optimal performance while
-                                minimizing resource consumption.
-                            </div>
-                            <div class="links">
-                                <a href="#">PDF</a>
-                                <a href="#">Poster</a>
-                            </div>
-                        </div>
+                        <h3>Acknowledgements</h3>
                     </div>
 
-                    <div class="research-section">
-                        <h3>Research Areas</h3>
-                        <p>My research focuses on the intersection of machine
-                            learning, distributed systems, and data science.
-                            Current areas of interest include:</p>
-                        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
-                            <li>Machine Learning and Artificial
-                                Intelligence</li>
-                            <li>Distributed Computing and Big Data
-                                Processing</li>
-                            <li>Optimization Algorithms and Performance
-                                Analysis</li>
-                            <li>Real-time Data Stream Processing</li>
-                            <li>Edge Computing and IoT Applications</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </main>
