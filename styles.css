@@ -182,6 +182,10 @@ p {
   margin-bottom: 3rem;
 }
 
+.paper-reference {
+  margin: 2em;
+}
+
 .research-section h3 {
   color: #2c3e50;
   font-size: 1.5rem;
