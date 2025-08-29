@@ -26,15 +26,42 @@
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #2c3e50;
             color: white;
-            padding: 2rem 0;
-            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 2rem;
+        }
+
+        .menu li {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .menu li:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
         }
 
         .subtitle {
@@ -72,8 +99,31 @@
         }
 
         @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu ul {
+                margin-top: 1em;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu li {
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                background: rgba(255, 255, 255, 0.1);
+                text-align: center;
+            }
+
+            .menu li:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+
             h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
             
             .container {
@@ -89,8 +139,14 @@
     <body>
         <header>
             <div class="container">
-                <h1>Jorge Novoa</h1>
-                <p class="subtitle">Personal Website</p>
+                <div class="menu">
+                    <h1>Jorge Novoa</h1>
+                    <ul>
+                        <li>Research</li>
+                        <li>Projects</li>
+                        <li>Miscellaneous</li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main>
@@ -112,13 +168,7 @@
                         laboriosam excepturi vel, consectetur accusamus
                         assumenda vero nesciunt perferendis, architecto minus
                         ?</p>
-                    <p>CV <a href="curriculum.pdf">Download CV</a></p>
-                </div>
-
-                <div class="content">
-                    <h2>Projects</h2>
-                    <p>Add your projects, portfolio items, or any other content
-                        here.</p>
+                    <p>CV <a href="./JorgeNovoaCV.pdf">Download CV</a></p>
                 </div>
 
                 <div class="content">
@@ -131,7 +181,7 @@
 
         <footer>
             <div class="container">
-                <p>&copy; 2024 Personal Website. All rights reserved.</p>
+                <p>&copy; 2025 Personal Website. All rights reserved.</p>
             </div>
         </footer>
     </body>
