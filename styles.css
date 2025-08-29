@@ -194,6 +194,85 @@ p {
   border-bottom: 1px solid #bdc3c7;
 }
 
+/* Project Page Specific Styles */
+.project-section {
+  margin-bottom: 3rem;
+}
+
+.project-section h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #2980b9;
+}
+
+.project-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #000;
+  background: #f8f9fa;
+  border-radius: 0 4px 4px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-item h4 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.project-meta {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-meta .company,
+.project-meta .institution {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.project-meta .duration {
+  color: #7f8c8d;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.project-description {
+  margin-bottom: 1rem;
+}
+
+.project-description p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.project-links {
+  margin-top: 1rem;
+}
+
+.project-links a {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.4rem 1rem;
+  background: #2980b9;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+.project-links a:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+}
+
 /* Footer */
 footer {
   background: #2c3e50;
