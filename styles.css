@@ -1,6 +1,7 @@
 
 html {
     font-size: 0.9rem;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 body {
@@ -20,6 +21,22 @@ body {
     width: 100%;
 }
 
+.content {
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+
+.contact h2 {
+    margin-top: 0px;
+}
+
+.content:nth-of-type(1) { background-color: #edf1f8; }
+.content:nth-of-type(2) { background-color: #e4eaf5; }
+.content:nth-of-type(3) { background-color: #dde4f0; }
+.content:nth-of-type(4) { background-color: #d8e0ec; }
+
 img {
     display: block;
     max-width: 100%;
@@ -34,12 +51,41 @@ ul {
 li {
     font-family: Georgia, 'Times New Roman', serif;
     color: #2a2a2a;
-    padding: 0.45rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+li::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid #5c4a2a;
+    flex-shrink: 0;
+}
+
+.sidebar li {
+    padding: 0.9rem 0;
     border-bottom: 1px solid #b0bac8;
 }
 
-li:first-child {
+.sidebar li:first-child {
     border-top: 1px solid #b0bac8;
+}
+
+.sidebar::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%235c4a2a' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%235c4a2a' stroke-width='0.8'/%3E%3Cpath d='M50 10 L53 20 L50 18 L47 20 Z' fill='%235c4a2a'/%3E%3Cpath d='M50 90 L53 80 L50 82 L47 80 Z' fill='%235c4a2a'/%3E%3Cpath d='M10 50 L20 53 L18 50 L20 47 Z' fill='%235c4a2a'/%3E%3Cpath d='M90 50 L80 53 L82 50 L80 47 Z' fill='%235c4a2a'/%3E%3Cpath d='M50 4 L51.5 8 L50 7 L48.5 8 Z M50 96 L51.5 92 L50 93 L48.5 92 Z M4 50 L8 51.5 L7 50 L8 48.5 Z M96 50 L92 51.5 L93 50 L92 48.5 Z' fill='%235c4a2a'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-family='Georgia, serif' font-size='28' fill='%235c4a2a'%3E%E2%9D%A6%3C/text%3E%3Cpath d='M30 28 Q50 20 70 28' fill='none' stroke='%235c4a2a' stroke-width='0.8'/%3E%3Cpath d='M30 72 Q50 80 70 72' fill='none' stroke='%235c4a2a' stroke-width='0.8'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.75;
 }
 
 @media (min-width: 768px) {
@@ -49,8 +95,7 @@ li:first-child {
     .sidebar {
         margin-top: 0;
         max-height: 99vh;
-        height: 200px;
-        margin: 80px 50px;
+        margin: 120px 50px;
         
     }
 
