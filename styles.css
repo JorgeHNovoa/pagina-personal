@@ -1,7 +1,6 @@
 
-/* ===== BASE ===== */
 html {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 body {
@@ -12,6 +11,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
 }
 
 img {
@@ -19,27 +25,37 @@ img {
     max-width: 100%;
 }
 
-
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* ===== LAYOUT ===== */
-.container {
-
+li {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #2a2a2a;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid #b0bac8;
 }
 
-/* ===== HEADER ===== */
-header {
-
+li:first-child {
+    border-top: 1px solid #b0bac8;
 }
 
-/* ===== MAIN ===== */
-main {
+@media (min-width: 768px) {
+    body {
+        flex-direction: row;
+    }
+    .sidebar {
+        margin-top: 0;
+        max-height: 99vh;
+        height: 200px;
+        margin: 80px 50px;
+        
+    }
 
+    li {
+        font-size: 1.1rem;
+    }
 }
 
-/* ===== FOOTER ===== */
-footer {
-
-}
