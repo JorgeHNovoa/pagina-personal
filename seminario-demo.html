@@ -5,172 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="DIM's Master Seminar – Estudiantes de magíster del DIM presentan sus investigaciones de tesis en un formato accesible para toda la comunidad académica.">
         <title>DIM's Master Seminar</title>
-        <link rel="stylesheet" href="./styles.css">
-        <style>
-            /* ── Seminar-page overrides ──────────────────────────── */
-
-            .seminar-header {
-                margin-bottom: 0;
-            }
-
-            .seminar-header h2 {
-                margin-top: 0;
-                margin-bottom: 0.15rem;
-            }
-
-            .seminar-subtitle {
-                margin: 0 0 1.1rem;
-                color: #5c4a2a;
-                font-size: 0.88rem;
-                letter-spacing: 0.03em;
-            }
-
-            .section-rule {
-                border: none;
-                border-top: 1px solid #c8d0dc;
-                margin: 1.1rem 0;
-            }
-
-            /* Meta info grid */
-            .seminar-meta {
-                display: grid;
-                grid-template-columns: auto 1fr;
-                gap: 0.45rem 1rem;
-                font-size: 0.88rem;
-                margin: 0;
-            }
-
-            .seminar-meta dt {
-                font-weight: bold;
-                color: #5c4a2a;
-                white-space: nowrap;
-            }
-
-            .seminar-meta dd {
-                margin: 0;
-                line-height: 1.5;
-            }
-
-            /* ── Talks section ────────────────────────────────────── */
-
-            .talks-content h2 {
-                margin-top: 0;
-                margin-bottom: 1.2rem;
-            }
-
-            .talk-year-label {
-                font-family: Georgia, 'Times New Roman', serif;
-                font-size: 0.78rem;
-                font-weight: bold;
-                letter-spacing: 0.08em;
-                text-transform: uppercase;
-                color: #5c4a2a;
-                border-bottom: 2px solid #8a7050;
-                padding-bottom: 0.3rem;
-                margin: 1.8rem 0 0.9rem;
-            }
-
-            .talk-year-label:first-child {
-                margin-top: 0;
-            }
-
-            .session-group {
-                margin-bottom: 1.1rem;
-            }
-
-            .session-group:last-child {
-                margin-bottom: 0;
-            }
-
-            .session-date {
-                font-family: Georgia, 'Times New Roman', serif;
-                font-size: 0.82rem;
-                font-weight: bold;
-                color: #333;
-                margin-bottom: 0.35rem;
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                flex-wrap: wrap;
-            }
-
-            .tag-video {
-                display: inline-block;
-                font-size: 0.7rem;
-                padding: 0.1rem 0.45rem;
-                border-radius: 3px;
-                background: #e4eaf5;
-                color: #2a4a7a;
-                text-decoration: none;
-                border: 1px solid #c0cce0;
-                font-weight: normal;
-                letter-spacing: 0.02em;
-            }
-
-            .tag-video:hover {
-                background: #d0daf0;
-                text-decoration: none;
-            }
-
-            .tag-english {
-                display: inline-block;
-                font-size: 0.7rem;
-                padding: 0.1rem 0.45rem;
-                border-radius: 3px;
-                background: #f0ece4;
-                color: #7a6a4a;
-                border: 1px solid #d4c8a8;
-                font-weight: normal;
-            }
-
-            /* Talk list */
-            .talk-list {
-                list-style: none;
-                padding: 0;
-                margin: 0 0 0 0.4rem;
-            }
-
-            .talk-list li {
-                display: flex;
-                align-items: flex-start;
-                gap: 0.5rem;
-                padding: 0.22rem 0;
-                line-height: 1.5;
-                font-size: 0.9rem;
-                border-bottom: none;
-            }
-
-            .talk-list li::before {
-                margin-top: 0.48rem;
-                flex-shrink: 0;
-            }
-
-            .talk-content {
-                flex: 1;
-            }
-
-            /* Highlight Jorge's own talk */
-            .talk-self .talk-content {
-                background: rgba(92, 74, 42, 0.07);
-                border-left: 3px solid #8a7050;
-                padding: 0.18rem 0.55rem;
-                border-radius: 0 3px 3px 0;
-            }
-        </style>
+        <link rel="stylesheet" href="./seminario-styles.css">
     </head>
     <body>
-        <nav class="sidebar">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./research.html">Research</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="./Curriculum.pdf" target="_blank">Curriculum</a></li>
-            </ul>
-        </nav>
-
         <main>
             <div class="container">
-
                 <!-- ── About card ───────────────────────────────── -->
                 <section class="content seminar-header">
                     <h2>DIM's Master Seminar</h2>
@@ -732,6 +571,64 @@
                         </ul>
                     </div>
 
+                </section>
+
+                <!-- ── Photos card ──────────────────────────────── -->
+                <section class="content photos-content">
+                    <h2>Some nice pictures</h2>
+
+                    <div class="photo-grid-solo">
+                        <img src="DIMmasterSeminar/15-07-2025.jpeg" alt="DIM Master Seminar, July 2025">
+                    </div>
+
+                    <div class="photo-grid">
+                        <img src="DIMmasterSeminar/04122024-1.jpeg" alt="">
+                        <img src="DIMmasterSeminar/20112024-3.jpeg" alt="">
+                        <img src="DIMmasterSeminar/20112024-1.jpeg" alt="">
+                        <img src="DIMmasterSeminar/20112024-2.jpeg" alt="">
+                        <img src="DIMmasterSeminar/13112024-2.jpeg" alt="">
+                        <img src="DIMmasterSeminar/13112024-1.jpeg" alt="">
+                        <img src="DIMmasterSeminar/06112024-1.jpeg" alt="">
+                        <img src="DIMmasterSeminar/06112024-2.jpeg" alt="">
+                        <img src="DIMmasterSeminar/13102024.jpeg" alt="">
+                        <img src="DIMmasterSeminar/30102024-1.jpeg" alt="">
+                        <img src="DIMmasterSeminar/06102024-1.jpeg" alt="">
+                        <img src="DIMmasterSeminar/06102024-2.jpeg" alt="">
+                        <img src="DIMmasterSeminar/030724-4.jpeg" alt="">
+                        <img src="DIMmasterSeminar/030724-5.jpeg" alt="">
+                        <img src="DIMmasterSeminar/030724-2.jpeg" alt="">
+                        <img src="DIMmasterSeminar/030724-3.jpeg" alt="">
+                        <img src="DIMmasterSeminar/260624-3.jpg" alt="">
+                        <img src="DIMmasterSeminar/030724-1.jpeg" alt="">
+                        <img src="DIMmasterSeminar/260624-1.jpg" alt="">
+                        <img src="DIMmasterSeminar/260624-2.jpg" alt="">
+                        <img src="DIMmasterSeminar/190624-1.jpeg" alt="">
+                        <img src="DIMmasterSeminar/190624-2.jpeg" alt="">
+                        <img src="DIMmasterSeminar/05062024-2.jpg" alt="">
+                        <img src="DIMmasterSeminar/05062024-3.jpg" alt="">
+                        <img src="DIMmasterSeminar/290524-3.jpg" alt="">
+                        <img src="DIMmasterSeminar/05062024-1.jpg" alt="">
+                        <img src="DIMmasterSeminar/290524-1.jpg" alt="">
+                        <img src="DIMmasterSeminar/290524-2.jpg" alt="">
+                        <img src="DIMmasterSeminar/220524-2.jpg" alt="">
+                        <img src="DIMmasterSeminar/220524-3.jpg" alt="">
+                        <img src="DIMmasterSeminar/15052024-1.jpg" alt="">
+                        <img src="DIMmasterSeminar/15052024-2.jpg" alt="">
+                        <img src="DIMmasterSeminar/0612-2.jpg" alt="">
+                        <img src="DIMmasterSeminar/0612-3.jpg" alt="">
+                        <img src="DIMmasterSeminar/2211-3-.jpg" alt="">
+                        <img src="DIMmasterSeminar/0612-1.jpg" alt="">
+                        <img src="DIMmasterSeminar/2211-1.jpg" alt="">
+                        <img src="DIMmasterSeminar/2211-2.jpg" alt="">
+                        <img src="DIMmasterSeminar/1511-1.jpg" alt="">
+                        <img src="DIMmasterSeminar/1511-2.jpg" alt="">
+                        <img src="DIMmasterSeminar/811-3.jpg" alt="">
+                        <img src="DIMmasterSeminar/811-4.jpg" alt="">
+                        <img src="DIMmasterSeminar/811-1.jpg" alt="">
+                        <img src="DIMmasterSeminar/811-2.jpg" alt="">
+                        <img src="DIMmasterSeminar/1110.jpg" alt="">
+                        <img src="DIMmasterSeminar/2510.jpg" alt="">
+                    </div>
                 </section>
 
             </div>

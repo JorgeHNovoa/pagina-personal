@@ -1,0 +1,296 @@
+html {
+    font-size: 0.9rem;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+body {
+    color: #000;
+    background-color: #d6dce6;
+    background-image: radial-gradient(circle, #00000018 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+}
+
+.content {
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+
+.contact h2 {
+    margin-top: 0px;
+}
+
+.content:nth-of-type(1) {
+    background-color: #edf1f8;
+}
+
+.content:nth-of-type(2) {
+    background-color: #e4eaf5;
+}
+
+.content:nth-of-type(3) {
+    background-color: #dde4f0;
+}
+
+.content:nth-of-type(4) {
+    background-color: #d8e0ec;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+li::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid #5c4a2a;
+    flex-shrink: 0;
+}
+
+.sidebar li {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #b0bac8;
+}
+
+.sidebar li:first-child {
+    border-top: 1px solid #b0bac8;
+}
+
+.sidebar::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%235c4a2a' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%235c4a2a' stroke-width='0.8'/%3E%3Cpath d='M50 10 L53 20 L50 18 L47 20 Z' fill='%235c4a2a'/%3E%3Cpath d='M50 90 L53 80 L50 82 L47 80 Z' fill='%235c4a2a'/%3E%3Cpath d='M10 50 L20 53 L18 50 L20 47 Z' fill='%235c4a2a'/%3E%3Cpath d='M90 50 L80 53 L82 50 L80 47 Z' fill='%235c4a2a'/%3E%3Cpath d='M50 4 L51.5 8 L50 7 L48.5 8 Z M50 96 L51.5 92 L50 93 L48.5 92 Z M4 50 L8 51.5 L7 50 L8 48.5 Z M96 50 L92 51.5 L93 50 L92 48.5 Z' fill='%235c4a2a'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-family='Georgia, serif' font-size='28' fill='%235c4a2a'%3E%E2%9D%A6%3C/text%3E%3Cpath d='M30 28 Q50 20 70 28' fill='none' stroke='%235c4a2a' stroke-width='0.8'/%3E%3Cpath d='M30 72 Q50 80 70 72' fill='none' stroke='%235c4a2a' stroke-width='0.8'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.75;
+}
+
+@media (min-width: 768px) {
+    body {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        margin-top: 0;
+        max-height: 99vh;
+        margin: 120px 50px;
+
+    }
+
+    li {
+        font-size: 1.1rem;
+    }
+}
+
+.seminar-header {
+    margin-bottom: 0;
+}
+
+.seminar-header h2 {
+    margin-top: 0;
+    margin-bottom: 0.15rem;
+}
+
+.seminar-subtitle {
+    margin: 0 0 1.1rem;
+    color: #5c4a2a;
+    font-size: 0.88rem;
+    letter-spacing: 0.03em;
+}
+
+.section-rule {
+    border: none;
+    border-top: 1px solid #c8d0dc;
+    margin: 1.1rem 0;
+}
+
+/* Meta info grid */
+.seminar-meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.45rem 1rem;
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+.seminar-meta dt {
+    font-weight: bold;
+    color: #5c4a2a;
+    white-space: nowrap;
+}
+
+.seminar-meta dd {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ── Talks section ────────────────────────────────────── */
+
+.talks-content h2 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+}
+
+.talk-year-label {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5c4a2a;
+    border-bottom: 2px solid #8a7050;
+    padding-bottom: 0.3rem;
+    margin: 1.8rem 0 0.9rem;
+}
+
+.talk-year-label:first-child {
+    margin-top: 0;
+}
+
+.session-group {
+    margin-bottom: 1.1rem;
+}
+
+.session-group:last-child {
+    margin-bottom: 0;
+}
+
+.session-date {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.82rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag-video {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 3px;
+    background: #e4eaf5;
+    color: #2a4a7a;
+    text-decoration: none;
+    border: 1px solid #c0cce0;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+}
+
+.tag-video:hover {
+    background: #d0daf0;
+    text-decoration: none;
+}
+
+.tag-english {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 3px;
+    background: #f0ece4;
+    color: #7a6a4a;
+    border: 1px solid #d4c8a8;
+    font-weight: normal;
+}
+
+.talk-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 0.4rem;
+}
+
+.talk-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.22rem 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    border-bottom: none;
+}
+
+.talk-list li::before {
+    margin-top: 0.48rem;
+    flex-shrink: 0;
+}
+
+.talk-content {
+    flex: 1;
+}
+
+/* Highlight Jorge's own talk */
+.talk-self .talk-content {
+    background: rgba(92, 74, 42, 0.07);
+    border-left: 3px solid #8a7050;
+    padding: 0.18rem 0.55rem;
+    border-radius: 0 3px 3px 0;
+}
+
+/* ── Photos section ──────────────────────────────────── */
+
+.photos-content h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.photo-grid-solo {
+    margin-bottom: 0.6rem;
+}
+
+.photo-grid-solo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+}
