@@ -216,8 +216,11 @@ li::before {
 }
 
 .tag-video::before {
-    content: "▶ ";
-    font-size: 0.6rem;
+    font-family: "Font Awesome 6 Brands";
+    content: "\f167";
+    margin-right: 0.3rem;
+    font-size: 0.75rem;
+    color: #ff0000;
 }
 
 .tag-video:hover {
