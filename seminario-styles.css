@@ -205,10 +205,10 @@ li::before {
     font-size: 0.7rem;
     padding: 0.2rem 0.6rem;
     border-radius: 3px;
-    background: #2a4a7a;
-    color: #fff;
+    background: #f0f4fa;
+    color: #2a4a7a;
     text-decoration: none;
-    border: 1px solid #1e3a60;
+    border: 1px solid #9ab0cc;
     font-weight: bold;
     letter-spacing: 0.04em;
     cursor: pointer;
@@ -219,13 +219,13 @@ li::before {
     font-family: "Font Awesome 6 Brands";
     content: "\f167";
     margin-right: 0.3rem;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: #ff0000;
 }
 
 .tag-video:hover {
-    background: #1e3a60;
-    border-color: #152d4a;
+    background: #e0e8f4;
+    border-color: #7a96b8;
     text-decoration: none;
 }
 
