@@ -166,9 +166,9 @@ li::before {
 
 .talk-year-label {
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 0.78rem;
+    font-size: 1.05rem;
     font-weight: bold;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #5c4a2a;
     border-bottom: 2px solid #8a7050;
@@ -260,19 +260,37 @@ li::before {
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
-    padding: 0.22rem 0;
-    line-height: 1.5;
-    font-size: 0.9rem;
+    padding: 0.45rem 0;
+    line-height: 1.6;
+    font-size: 0.92rem;
+    border-bottom: 1px solid #e4eaf5;
+}
+
+.talk-list li:last-child {
     border-bottom: none;
+    padding-bottom: 0;
 }
 
 .talk-list li::before {
-    margin-top: 0.48rem;
+    margin-top: 0.52rem;
     flex-shrink: 0;
 }
 
 .talk-content {
     flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.1rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.talk-content strong {
+    font-weight: normal;
+    font-style: italic;
+    color: #1a3050;
+    font-size: 0.93rem;
+    line-height: 1.55;
 }
 
 
