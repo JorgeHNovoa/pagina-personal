@@ -276,22 +276,28 @@ li::before {
     flex-shrink: 0;
 }
 
-.talk-content {
+.talk-item {
     flex: 1;
 }
 
 .talk-title {
-    display: block;
+    margin: 0;
     color: #1a3050;
     font-size: 0.93rem;
     line-height: 1.5;
 }
 
 .talk-speaker {
-    display: block;
+    margin: 0.25rem 0 0;
     font-size: 0.8rem;
     color: #666;
-    margin-top: 0.25rem;
+}
+
+.talk-self .talk-item {
+    background: rgba(92, 74, 42, 0.07);
+    border-left: 3px solid #8a7050;
+    padding: 0.18rem 0.55rem;
+    border-radius: 0 3px 3px 0;
 }
 
 
