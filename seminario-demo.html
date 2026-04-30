@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="DIM's Master Seminar – Estudiantes de magíster del DIM presentan sus investigaciones de tesis en un formato accesible para toda la comunidad académica.">
+        <title>DIM's Master Seminar</title>
+        <link rel="stylesheet" href="./styles.css">
+        <style>
+            /* ── Seminar-page overrides ──────────────────────────── */
+
+            .seminar-header {
+                margin-bottom: 0;
+            }
+
+            .seminar-header h2 {
+                margin-top: 0;
+                margin-bottom: 0.15rem;
+            }
+
+            .seminar-subtitle {
+                margin: 0 0 1.1rem;
+                color: #5c4a2a;
+                font-size: 0.88rem;
+                letter-spacing: 0.03em;
+            }
+
+            .section-rule {
+                border: none;
+                border-top: 1px solid #c8d0dc;
+                margin: 1.1rem 0;
+            }
+
+            /* Meta info grid */
+            .seminar-meta {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: 0.45rem 1rem;
+                font-size: 0.88rem;
+                margin: 0;
+            }
+
+            .seminar-meta dt {
+                font-weight: bold;
+                color: #5c4a2a;
+                white-space: nowrap;
+            }
+
+            .seminar-meta dd {
+                margin: 0;
+                line-height: 1.5;
+            }
+
+            /* ── Talks section ────────────────────────────────────── */
+
+            .talks-content h2 {
+                margin-top: 0;
+                margin-bottom: 1.2rem;
+            }
+
+            .talk-year-label {
+                font-family: Georgia, 'Times New Roman', serif;
+                font-size: 0.78rem;
+                font-weight: bold;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: #5c4a2a;
+                border-bottom: 2px solid #8a7050;
+                padding-bottom: 0.3rem;
+                margin: 1.8rem 0 0.9rem;
+            }
+
+            .talk-year-label:first-child {
+                margin-top: 0;
+            }
+
+            .session-group {
+                margin-bottom: 1.1rem;
+            }
+
+            .session-group:last-child {
+                margin-bottom: 0;
+            }
+
+            .session-date {
+                font-family: Georgia, 'Times New Roman', serif;
+                font-size: 0.82rem;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 0.35rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
+
+            .tag-video {
+                display: inline-block;
+                font-size: 0.7rem;
+                padding: 0.1rem 0.45rem;
+                border-radius: 3px;
+                background: #e4eaf5;
+                color: #2a4a7a;
+                text-decoration: none;
+                border: 1px solid #c0cce0;
+                font-weight: normal;
+                letter-spacing: 0.02em;
+            }
+
+            .tag-video:hover {
+                background: #d0daf0;
+                text-decoration: none;
+            }
+
+            .tag-english {
+                display: inline-block;
+                font-size: 0.7rem;
+                padding: 0.1rem 0.45rem;
+                border-radius: 3px;
+                background: #f0ece4;
+                color: #7a6a4a;
+                border: 1px solid #d4c8a8;
+                font-weight: normal;
+            }
+
+            /* Talk list */
+            .talk-list {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 0 0.4rem;
+            }
+
+            .talk-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding: 0.22rem 0;
+                line-height: 1.5;
+                font-size: 0.9rem;
+                border-bottom: none;
+            }
+
+            .talk-list li::before {
+                margin-top: 0.48rem;
+                flex-shrink: 0;
+            }
+
+            .talk-content {
+                flex: 1;
+            }
+
+            /* Highlight Jorge's own talk */
+            .talk-self .talk-content {
+                background: rgba(92, 74, 42, 0.07);
+                border-left: 3px solid #8a7050;
+                padding: 0.18rem 0.55rem;
+                border-radius: 0 3px 3px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./research.html">Research</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./Curriculum.pdf" target="_blank">Curriculum</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="container">
+
+                <!-- ── About card ───────────────────────────────── -->
+                <section class="content seminar-header">
+                    <h2>DIM's Master Seminar</h2>
+                    <p class="seminar-subtitle">Departamento de Ingeniería Matemática &mdash; Universidad de Chile</p>
+
+                    <p style="margin: 0 0 0.75rem;">
+                        In this seminar, the master's students of the
+                        <a href="https://www.dim.uchile.cl/" target="_blank" rel="noopener">Department of Mathematical Engineering</a>
+                        present the main problem and/or research question they work on in their thesis, using a
+                        low-technical-level tone that makes each session accessible to everyone in the academic
+                        community of the department.
+                    </p>
+                    <p style="margin: 0 0 0.75rem;">
+                        The main goal is to share with the community the research fields being developed in the
+                        <a href="https://magister.dim.uchile.cl/" target="_blank" rel="noopener">DIM's master program</a>,
+                        strengthening awareness of the <em>state of the art</em> and the many possibilities of pure or
+                        applied mathematical research in the department.
+                    </p>
+                    <p style="margin: 0 0 1.1rem;">
+                        (Almost) every session is in <strong>Spanish</strong>.
+                        Recordings are available on the
+                        <a href="https://www.youtube.com/playlist?list=PLEXRc6kWJS9m7sTsrHVj7Rutc9FnFrO2N"
+                           target="_blank" rel="noopener">YouTube playlist</a>.
+                    </p>
+
+                    <hr class="section-rule">
+
+                    <dl class="seminar-meta">
+                        <dt>Place</dt>
+                        <dd>Department of Mathematical Engineering, Beauchef 851, Santiago, Chile</dd>
+
+                        <dt>Time</dt>
+                        <dd>Wednesdays / Fridays 12:00, on fixed dates</dd>
+
+                        <dt>Organizers</dt>
+                        <dd>Rodrigo Altamirano, Paolo Martiniello and Luciano Villarroel</dd>
+
+                        <dt>Past organizers</dt>
+                        <dd>Sebastián Flores, Matías Vera, Ricardo Ziegele and Pablo Zúñiga</dd>
+                    </dl>
+                </section>
+
+                <!-- ── Talks card ────────────────────────────────── -->
+                <section class="content talks-content">
+                    <h2>Talks</h2>
+
+                    <!-- 2025 ──────────────────────────────────── -->
+                    <div class="talk-year-label">2025</div>
+
+                    <div class="session-group">
+                        <div class="session-date">December 12, 2025</div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Ceferino Medina, <strong>Laplaciano, ecuaciones de tipo Einstein y resultados asociados en variedades de deformación D-generalizada</strong></span></li>
+                            <li><span class="talk-content">Sebastián Pincheira, <strong>Un primer vistazo a las superficies de traslación</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">December 5, 2025</div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Joaquín Márquez, <strong>Regularidad elíptica y estados de borde</strong></span></li>
+                            <li><span class="talk-content">Rocío Yáñez, <strong>Identificación de variantes somáticas en muestras tumor-only usando machine learning</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">November 28, 2025</div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Millaray Díaz, <strong>Métodos de Machine Learning para la predicción de inasistencias en hospitales</strong></span></li>
+                            <li><span class="talk-content">Javiera Carrasco, <strong>Equidad algorítmica mediante Transporte Óptimo: simetrías entre input y output en problemas de regresión</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">November 21, 2025</div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Benjamín Mitchell, <strong>Algoritmos de aprendizaje de máquinas aplicado al mercado eléctrico</strong></span></li>
+                            <li><span class="talk-content">Fernanda González, <strong>Una invitación al Problema Isoperimétrico: más allá de la codimensión uno</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">November 14, 2025</div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Cristóbal Ramos, <strong>Asimilación de datos médicos para problemas inversos de orientación de fibras cardíacas usando modelos de cristales líquidos</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">November 7, 2025</div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Martín Sepúlveda, <strong>Introducción a las MOTS</strong></span></li>
+                            <li class="talk-self"><span class="talk-content">Jorge Novoa, <strong>Existencia de continuos de soluciones mediante teoría del grado y su aplicación a ecuaciones diferenciales con operadores de exponente variable generalizado</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">October 10, 2025</div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Vicente Sandoval, <strong>Sobre el número de Ramsey de expansiones de hipérboles</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">October 3, 2025</div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Paolo Martiniello, <strong>Espacios cuasimétricos finitos con pocas líneas y línea universal</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">September 26, 2025</div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">José Pablo Santander, <strong>Gamma-convergencia y su relación con la conjugada de Fenchel y el subdiferencial</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            July 15, 2025
+                            <a class="tag-video" href="https://youtu.be/CcjPq7LyoqY?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Karim Saud, <strong>Superficies teseladas por polígonos: combinatoria, geometría y dinámica</strong></span></li>
+                            <li><span class="talk-content">Gabriel Ortega, <strong>Predicción automática de dificultad en ítems y su integración como prior en modelos bayesianos de respuesta al ítem</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            July 9, 2025
+                            <a class="tag-video" href="https://youtu.be/NtTcljplb1w?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Matías Neto, <strong>Cooperación en poblaciones estructuradas por un rasgo continuo: dinámicas de selección y adaptación evolutiva</strong></span></li>
+                            <li><span class="talk-content">Adrián Arellano, <strong>Programación Minera en Block Caving: un modelo aplicable con restricciones geomecánicas estocásticas</strong></span></li>
+                            <li><span class="talk-content">Rocío Yáñez, <strong>Desarrollo y evaluación de métodos de machine learning para la predicción y anotación de variantes somáticas</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            July 2, 2025
+                            <a class="tag-video" href="https://youtu.be/5e1AS-yAFcw?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Lucas Villagrán, <strong>Algunos aspectos matemáticos de modelos de difusión aplicados a la generación de imágenes</strong></span></li>
+                            <li><span class="talk-content">Benjamin Pastene, <strong>Downscaling de datos de viento mediante técnicas de deep learning</strong></span></li>
+                            <li><span class="talk-content">Domingo Ruiz, <strong>Reducir CVP a autómatas tipo Fungal con secuencia de actualización arbitraria</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            June 25, 2025
+                            <a class="tag-video" href="https://youtu.be/dCRwAOsj0cc?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Sebastián Lemus, <strong>Solución directa para las probabilidades de transición de TASEP discreto</strong></span></li>
+                            <li><span class="talk-content">Vicente Sandoval, <strong>Números de Ramsey de Expansiones de Árboles</strong></span></li>
+                            <li><span class="talk-content">Tomás Vesperinas, <strong>Predicción climática estacional en Chile mediante técnicas de aprendizaje de máquinas</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">June 18, 2025</div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Jesús Sayes, <strong>Medidas ergódicas en subshifts S-ádicos unimodulares</strong></span></li>
+                            <li><span class="talk-content">Cristobal Godoy, <strong>Existencia de Tríos Pitagóricos Monocromáticos en Coloreos de los Naturales</strong></span></li>
+                            <li><span class="talk-content">Vicente Escobar, <strong>Algoritmos de gradiente descendiente con muestreo markoviano para calcular baricentros de Wasserstein</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            June 11, 2025
+                            <a class="tag-video" href="https://youtu.be/YRsbQC2Jjzg?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Fraick Reyes, <strong>Comportamiento asintótico de procesos branching con difusión</strong></span></li>
+                            <li><span class="talk-content">Bruno Skarmeta, <strong>Árboles spanning en subgrafos de grafos pseudoaleatorios</strong></span></li>
+                            <li><span class="talk-content">Luciano Villarroel, <strong>Conjetura de Chen-Chvátal en grafos de diámetro 3</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            June 4, 2025
+                            <a class="tag-video" href="https://youtu.be/L6WdKbLJ_QI?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Tiare Letelier, <strong>Sistema informático en base a inteligencia artificial para predecir peak de hospitalizaciones no pediátricas por causas respiratorias</strong></span></li>
+                            <li><span class="talk-content">Maite Barrera, <strong>Una contribución al estudio de métodos de optimización para problemas inversos de estimación de parámetros en un modelo de cromatografía</strong></span></li>
+                            <li><span class="talk-content">Leila Reyes, <strong>Estimaciones de Carleman para operadores diferenciales sobre la física de los medios continuos</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            May 28, 2025
+                            <a class="tag-video" href="https://youtu.be/nR8Ef6GC7r0?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Jorge Valenzuela, <strong>Protocolos cuánticos distribuidos en el modelo Broadcast-Congested-Clique</strong></span></li>
+                            <li><span class="talk-content">Antonia Suazo, <strong>Aplicación y desarrollo de técnicas de análisis topológico de datos para integrar datos de diferentes fuentes "ómicas"</strong></span></li>
+                            <li><span class="talk-content">Joaquín Márquez, <strong>Sobre regularidad elíptica en el semiplano</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            May 22, 2025
+                            <a class="tag-video" href="https://youtu.be/kLn76Zy4BsY?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Benjamín Bórquez, <strong>Estabilidad cuantitativa de los minimizadores de Yamabe con borde</strong></span></li>
+                            <li><span class="talk-content">Vicente Poblete, <strong>Extensión de memoria a procesos TASEP y perturbaciones temporales del punto fijo KPZ</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            May 14, 2025
+                            <a class="tag-video" href="https://youtu.be/h_6WzPCTuus?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Rodrigo Altamirano, <strong>Conjetura de Payne en dominios simplemente conexos</strong></span></li>
+                            <li><span class="talk-content">Paolo Martiniello, <strong>Espacios cuasimétricos finitos con pocas líneas y línea universal</strong></span></li>
+                            <li><span class="talk-content">Fabián Ceballos Ulloa, <strong>Teoría de perturbación analítica de valores y vectores propios, y su aplicación al proceso de homogeneización de estructuras ultra-delgadas</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            May 7, 2025
+                            <a class="tag-video" href="https://youtu.be/A1ppcW44UMM?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Ricardo Ziegele, <strong>EDP's completamente no lineales y su conexión con el problema de mapeos armónicos</strong></span></li>
+                            <li><span class="talk-content">Martín Berrúos, <strong>Grupos de monodromía de superficies de traslación</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            April 30, 2025
+                            <a class="tag-video" href="https://youtu.be/MbDYN5SUGWw?feature=shared" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">José Pablo Santander, <strong>Sobre el teorema de Attouch</strong></span></li>
+                            <li><span class="talk-content">Milán Cabezas, <strong>Localizando entropía en sistemas simbólicos</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <!-- 2024 ──────────────────────────────────── -->
+                    <div class="talk-year-label">2024</div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            December 4, 2024
+                            <a class="tag-video" href="https://youtu.be/nbo7yb-10cY" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Diego Céspedes, <strong>Interacciones entre teoría ergódica y teoría de números</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            November 27, 2024
+                            <a class="tag-video" href="https://youtu.be/YWGJ7a3Ut3E" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Álvaro Márquez, <strong>Generación de modelos de atmósferas estelares mediante PINNs</strong></span></li>
+                            <li><span class="talk-content">Benjamin Borquez, <strong>Estabilidad cuantitativa de los minimizantes del Problema de Yamabe con borde</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            November 20, 2024
+                            <a class="tag-video" href="https://youtu.be/bZQjxz2goOo" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Milan Cabezas, <strong>Entropía Positiva Uniforme y Medidas de Máxima Entropía en Subshifts</strong></span></li>
+                            <li><span class="talk-content">Karim Saud, <strong>Origamis y grupos de monodromía modular</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            November 13, 2024
+                            <a class="tag-video" href="https://youtu.be/d18IUU2S6Jw" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Alonso Rojas, <strong>Inflación cósmica y aproximación slow-roll</strong></span></li>
+                            <li><span class="talk-content">Matías Ortíz, <strong>Multiple Matroid Secretary Problem: nuevos enfoques del problema clásico</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            November 6, 2024
+                            <a class="tag-video" href="https://youtu.be/lOqen6voUsU" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Vicente Poblete, <strong>Probabilidades de transición para sistemas de partículas tipo TASEP</strong></span></li>
+                            <li><span class="talk-content">Martín Berrúos, <strong>Grupos de monodromía y superficies de traslación</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            October 30, 2024
+                            <a class="tag-video" href="https://youtu.be/4YofkergIWY" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Matías Jara, <strong>Avances en el Matroid Secretary Problem para matroides de rango 2</strong></span></li>
+                            <li><span class="talk-content">Sebastián Flores, <strong>Conjetura de Landis para operadores elípticos no locales</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            October 16, 2024
+                            <a class="tag-video" href="https://youtu.be/RhZOUEP7uyU" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Arturo Muñoz, <strong>Modelización de Fibras Cardíacas como Cristales Líquidos: solución de la ecuación de Frank-Oseen con cuaterniones</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            October 9, 2024
+                            <a class="tag-video" href="https://youtu.be/w55CeW9immU" target="_blank" rel="noopener">Video</a>
+                            <span class="tag-english">Session in English</span>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Matías Neto, <strong>Emergence of species: an extension to cooperative case</strong></span></li>
+                            <li><span class="talk-content">Matías V. Vera, <strong>Entry of renewable energy: a stochastic control approach</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            July 3, 2024
+                            <a class="tag-video" href="https://youtu.be/L57MkDxOIHQ" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Álvaro Márquez, <strong>Aplicación de PINN's en modelos numéricos de atmósferas estelares</strong></span></li>
+                            <li><span class="talk-content">Victoria Andaur, <strong>Optimización del layout de aerogeneradores: Ruido</strong></span></li>
+                            <li><span class="talk-content">Sebastián Flores, <strong>Teoremas de tipo Liouville para operadores elípticos no locales</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            June 26, 2024
+                            <a class="tag-video" href="https://youtu.be/KC-SxowSRl4" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Gary Vidal, <strong>Certificación local de grafos minor free</strong></span></li>
+                            <li><span class="talk-content">Pablo Araya, <strong>Intersection of level sets of the GFF</strong></span></li>
+                            <li><span class="talk-content">Antonia Labarca, <strong>Testeo distribuido de propiedades dispersas de grafos</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            June 19, 2024
+                            <a class="tag-video" href="https://youtu.be/hQlPQmjyrgw" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Luis Fuentes, <strong>Variaciones en las probabilidades de transición de TASEP, con aplicaciones en flujo vehicular</strong></span></li>
+                            <li><span class="talk-content">Diego Olguín, <strong>Algoritmo de filtraje no lineal basado en operador de Koopman aplicado a modelos en epidemiología</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            June 5, 2024
+                            <a class="tag-video" href="https://youtu.be/1pdvyVJafm4" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Maximiliano Lioi, <strong>Contribuciones en el algoritmo de Catching-Up con proyecciones aproximadas para los procesos de arrastre</strong></span></li>
+                            <li><span class="talk-content">Damiale Villablanca, <strong>Conjetura de Chen-Chvatal en grafos</strong></span></li>
+                            <li><span class="talk-content">Diego Manríquez, <strong>Evaluación del Programa Suma y Sigue (CMMEdu)</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            May 29, 2024
+                            <a class="tag-video" href="https://youtu.be/2iJF_x4C98M" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Matías Ortiz, <strong>Un nuevo enfoque probabilístico para el Matroid Secretary Problem</strong></span></li>
+                            <li><span class="talk-content">Carlos Antil, <strong>Encontrar Conjunto Independiente Maximal mediante Redes Dinámicas Dirigidas Sincrónicas</strong></span></li>
+                            <li><span class="talk-content">Arturo Muñoz, <strong>Modelización de fibras cardíacas como cristales líquidos</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            May 22, 2024
+                            <a class="tag-video" href="https://youtu.be/v0DvjFtaMA0" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Benjamín Vera, <strong>Optimización aplicada al mercado eléctrico: control óptimo de un modelo de polución volátil</strong></span></li>
+                            <li><span class="talk-content">Matías Vera, <strong>Optimización aplicada al mercado eléctrico: inversión óptima para entrada de energías renovables</strong></span></li>
+                            <li><span class="talk-content">Vicente Cabezas, <strong>Conductividad hidráulica en un relave durante un sismo</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            May 15, 2024
+                            <a class="tag-video" href="https://youtu.be/oGuqE8asCKU" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Diego Céspedes, <strong>Promedios ergódicos no convencionales</strong></span></li>
+                            <li><span class="talk-content">Felipe Espinosa, <strong>Dinámicas sobre los puntos altos del GFF</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <!-- 2023 ──────────────────────────────────── -->
+                    <div class="talk-year-label">2023</div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            December 6, 2023
+                            <a class="tag-video" href="https://youtu.be/-hobaV1Qnso" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Tomás Laengle, <strong>Estudio del Pseudo Movimiento Browniano</strong></span></li>
+                            <li><span class="talk-content">Javier Maass, <strong>Mean Field Limits of Equivariant Neural Networks</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            November 22, 2023
+                            <a class="tag-video" href="https://youtu.be/k6MiOjSM_Ok" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Yeniffer Muñoz, <strong>Reconstrucción de Grafos Hiperbólicos Aleatorios</strong></span></li>
+                            <li><span class="talk-content">David Cifuentes, <strong>Recognizing Hereditary Graph Classes in the Congested Clique Model in the Presence of Byzantine Nodes</strong></span></li>
+                            <li><span class="talk-content">Antonia Labarca, <strong>Palabras cuasialeatorias y Método de Flag-Algebra</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            November 15, 2023
+                            <a class="tag-video" href="https://youtu.be/9L-5fJEJN3I" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Félix Brokering, <strong>Relaciones invariantes en dinámica topológica</strong></span></li>
+                            <li><span class="talk-content">Axel Álvarez, <strong>Sistemas minimales y grupo de automorfismos virtual</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            November 8, 2023
+                            <a class="tag-video" href="https://youtu.be/s_jOIt15P44" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Juan Pablo Sepúlveda, <strong>Direcciones no deterministas en acciones de Z²</strong></span></li>
+                            <li><span class="talk-content">Manuel Torres, <strong>Contribuciones al estudio del state-dependent sweeping process y aplicaciones</strong></span></li>
+                            <li><span class="talk-content">Vicente Maturana, <strong>Extensiones afines de intercambios de intervalos</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            October 25, 2023
+                            <a class="tag-video" href="https://youtu.be/x0gJAsfTJ1o" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Cristian Palma, <strong>Algoritmos de balanceo bajo una función cóncava de la carga</strong></span></li>
+                            <li><span class="talk-content">Valentina Gómez, <strong>Nuevas heurísticas para el diseño estratégico de una red de líneas de transporte público</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            October 11, 2023
+                            <a class="tag-video" href="https://youtu.be/9dNRwh28AiU" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Francisco Muñoz, <strong>Cálculo de baricentros de Wasserstein Bayesianos utilizando redes generativas como distribuciones a priori</strong></span></li>
+                            <li><span class="talk-content">Pablo Zúñiga, <strong>Conjuntos explorables</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            October 4, 2023
+                            <a class="tag-video" href="https://youtu.be/gNkeVBE3Ul4" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Tomás Banduc, <strong>Caracterización de Fibrilación Auricular con Núcleo de Calor Anisotrópico</strong></span></li>
+                            <li><span class="talk-content">Javiera Gutiérrez, <strong>Asymptotic opinions in Erdős-Rényi random networks</strong></span></li>
+                            <li><span class="talk-content">Sebastián Cobaise, <strong>Implementación de métodos de aprendizaje de máquinas con información física para la modelación de deslizamiento cuasi-estático en fallas</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            July 12, 2023
+                            <a class="tag-video" href="https://youtu.be/LaDYfhiYC80" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Javier Maass, <strong>Límites Mean Field de Redes Neuronales Equivariantes</strong></span></li>
+                            <li><span class="talk-content">Kurt Walsen, <strong>Uso de aprendizaje de máquinas y herramientas filogenéticas para el modelamiento y estudio de la evolución química en la Vía Láctea</strong></span></li>
+                            <li><span class="talk-content">Juan Pablo Bravo, <strong>Grafos Aleatorios Hiperbólicos: estudio de parámetros</strong></span></li>
+                            <li><span class="talk-content">Diego Morales, <strong>Aproximación de funciones de probabilidad y aplicaciones a problemas con restricciones probabilísticas</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            June 14, 2023
+                            <a class="tag-video" href="https://youtu.be/zB0BDantcI4" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Axel Kolm, <strong>Complejidad de lista 3 coloreo para grafos hereditarios y con restricciones de diámetro</strong></span></li>
+                            <li><span class="talk-content">Pablo Zúñiga, <strong>Conjuntos de salida del Campo Libre Gaussiano en R^d</strong></span></li>
+                            <li><span class="talk-content">Mariano Llancamán, <strong>Extensiones del Algoritmo Ranking para problemas de emparejamiento en línea en grafos bipartitos</strong></span></li>
+                            <li><span class="talk-content">Félix Brokering, <strong>Tameness de sustituciones de Pisot</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            June 7, 2023
+                            <a class="tag-video" href="https://youtu.be/0HezhhiVIxc" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Benjamín Tardy, <strong>Clasificación de N-solitón para KP II</strong></span></li>
+                            <li><span class="talk-content">Axel Álvarez, <strong>Grupo de automorfismo virtual en un flujo minimal</strong></span></li>
+                            <li><span class="talk-content">Francisco Muñoz, <strong>Implementación del Algoritmo SGD para calcular el Baricentro de Wasserstein Bayesiano en conjuntos de imágenes</strong></span></li>
+                            <li><span class="talk-content">Sebastián Tapia, <strong>Estudio y simulación de ondas de tráfico: colisión de Jamitones</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="session-group">
+                        <div class="session-date">
+                            May 31, 2023
+                            <a class="tag-video" href="https://youtu.be/3Qo43j8VvjM" target="_blank" rel="noopener">Video</a>
+                        </div>
+                        <ul class="talk-list">
+                            <li><span class="talk-content">Manuel Torres, <strong>Método de tipo Galerkin para inclusiones integro-diferenciales con aplicaciones al sweeping process y problemas de control</strong></span></li>
+                            <li><span class="talk-content">Sebastián Cobaise, <strong>Implementación de aprendizaje de máquinas con información física para la modelación de desplazamiento sísmico</strong></span></li>
+                            <li><span class="talk-content">Benjamín Peralta, <strong>Localización óptima de estaciones de carga para vehículos eléctricos en la región Metropolitana</strong></span></li>
+                            <li><span class="talk-content">David Cifuentes, <strong>El problema de los Nodos Bizantinos en Computación Distribuida</strong></span></li>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2026 Personal Website. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
