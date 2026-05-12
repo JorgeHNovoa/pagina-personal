@@ -360,8 +360,8 @@ li::before {
     border-radius: 4px;
     margin-bottom: 1rem;
     background: #d8e0ec;
-    border: 1px solid #b8aa90;
-    box-shadow: 0 4px 16px rgba(44, 36, 18, 0.18), 0 1px 3px rgba(44, 36, 18, 0.10);
+    border: 1px solid #8a7050;
+    box-shadow: 0 8px 32px rgba(44, 36, 18, 0.45), 0 2px 8px rgba(44, 36, 18, 0.25);
 }
 
 .carousel-img {
