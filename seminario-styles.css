@@ -117,6 +117,14 @@ li::before {
 
 .seminar-header {
     margin-bottom: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .seminar-header {
+        min-height: unset;
+    }
 }
 
 .seminar-header h2 {
@@ -339,4 +347,284 @@ li::before {
     .photo-grid {
         grid-template-columns: 1fr 1fr;
     }
+}
+
+/* ── Carousel ────────────────────────────────────── */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%;
+
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background: #d8e0ec;
+    border: 1px solid #8a7050;
+    box-shadow: 0 4px 20px rgba(44, 36, 18, 0.45), 0 1px 4px rgba(44, 36, 18, 0.25);
+}
+
+.carousel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-img.active {
+    opacity: 1;
+}
+
+.carousel-img.active {
+    opacity: 1;
+}
+
+/* ── Year filter ──────────────────────────────────── */
+
+.year-section {
+    display: none;
+}
+.year-section.active {
+    display: block;
+}
+
+/* Filter bar */
+.year-filter {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.4rem;
+}
+
+/* Buttons — mobile-first: large tap targets */
+.year-btn {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 0.55rem 1.2rem;
+    border-radius: 3px;
+    border: 1px solid #8a7050;
+    background: #f0ece4;
+    color: #5c4a2a;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.year-btn:hover,
+.year-btn:focus-visible {
+    background: #e8e0d0;
+    border-color: #5c4a2a;
+    outline: none;
+}
+
+.year-btn.active {
+    background: #5c4a2a;
+    color: #f5f0e8;
+    border-color: #5c4a2a;
+}
+
+/* Desktop: smaller, denser buttons */
+@media (min-width: 768px) {
+    .year-btn {
+        font-size: 0.88rem;
+        padding: 0.3rem 0.85rem;
+    }
+
+    .carousel {
+        width: 90%;
+        padding-top: 40%;   /* 66.67% of 60% keeps the 3:2 ratio */
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ── Talk Roulette ──────────────────────────────────── */
+
+.roulette-widget {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.roulette-intro {
+    margin: 0 0 0.55rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+.roulette-btn {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    padding: 0.5rem 1.1rem;
+    border-radius: 3px;
+    border: 1px solid #8a7050;
+    background: #f0ece4;
+    color: #5c4a2a;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.roulette-btn:hover,
+.roulette-btn:focus-visible {
+    background: #e8e0d0;
+    border-color: #5c4a2a;
+    outline: none;
+}
+
+.roulette-btn:active {
+    background: #5c4a2a;
+    color: #f5f0e8;
+    border-color: #5c4a2a;
+}
+
+.roulette-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.roulette-result {
+    border-left: 3px solid #8a7050;
+    background: rgba(92, 74, 42, 0.06);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0 3px 3px 0;
+    animation: roulette-fadein 0.3s ease;
+}
+
+@keyframes roulette-fadein {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.roulette-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #8a7050;
+}
+
+.roulette-result .roulette-title {
+    margin: 0.25rem 0 0;
+    color: #1a3050;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.roulette-result .roulette-speaker {
+    margin: 0.2rem 0 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Tick flash — each intermediate step */
+@keyframes roulette-tick-flash {
+    0%   { color: #8a7050; }
+    60%  { color: #1a3050; }
+    100% { color: #1a3050; }
+}
+
+.roulette-tick {
+    animation: roulette-tick-flash 0.12s ease forwards;
+}
+
+/* Settle pulse — lands on winner */
+@keyframes roulette-settle {
+    0%   { background: rgba(92, 74, 42, 0.06); }
+    40%  { background: rgba(92, 74, 42, 0.18); }
+    100% { background: rgba(92, 74, 42, 0.06); }
+}
+
+.roulette-settled {
+    animation: roulette-settle 0.6s ease forwards;
+}
+
+/* ── Footer ──────────────────────────────────── */
+
+.seminar-footer {
+    width: 100%;
+    max-width: 700px;
+    padding: 1.5rem 1.5rem 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    border-top: 1px solid #b8c4d0;
+    margin-top: 0.4rem;
+}
+
+.footer-tagline {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #5c4a2a;
+    margin: 0 0 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.8rem;
+    color: #2a4a7a;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.footer-links a:hover {
+    color: #5c4a2a;
+    text-decoration: underline;
+}
+
+.footer-sep {
+    display: none;
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    color: #8a9ab0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+@media (min-width: 540px) {
+    .footer-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.3rem 0.5rem;
+    }
+
+    .footer-sep {
+        display: inline;
+        color: #8a9ab0;
+        font-size: 0.8rem;
+    }
+}
+
+/* Persistent highlight on the winning talk in the list */
+.roulette-selected .talk-item {
+    background: rgba(92, 74, 42, 0.09);
+    border-left: 3px solid #8a7050;
+    padding: 0.18rem 0.55rem;
+    border-radius: 0 3px 3px 0;
 }
