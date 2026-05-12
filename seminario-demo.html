@@ -648,5 +648,24 @@
 
           
         </main>
+        <script>
+            (function () {
+                var buttons = document.querySelectorAll('.year-btn');
+                var sections = document.querySelectorAll('.year-section');
+
+                buttons.forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        var year = btn.dataset.year;
+
+                        buttons.forEach(function (b) { b.classList.remove('active'); });
+                        sections.forEach(function (s) { s.classList.remove('active'); });
+
+                        btn.classList.add('active');
+                        var target = document.querySelector('.year-section[data-year="' + year + '"]');
+                        if (target) target.classList.add('active');
+                    });
+                });
+            })();
+        </script>
     </body>
 </html>
