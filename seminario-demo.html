@@ -31,13 +31,6 @@
                     <div class="carousel" aria-label="Seminar photos">
                     </div>
 
-                    <p style="margin: 0 0 1.1rem;">
-                        (Almost) every session is in <strong>Spanish</strong>.
-                        Recordings are available on the
-                        <a href="https://www.youtube.com/playlist?list=PLEXRc6kWJS9m7sTsrHVj7Rutc9FnFrO2N"
-                           target="_blank" rel="noopener">YouTube playlist</a>.
-                    </p>
-
                     <hr class="section-rule">
 
                     <dl class="seminar-meta">
@@ -53,6 +46,15 @@
                         <dt>Past organizers</dt>
                         <dd>Luciano Villarroel, Rodrigo Altamirano, Sebastián Flores, Matías Vera, Ricardo Ziegele and Pablo Zúñiga</dd>
                     </dl>
+
+                    <div class="roulette-widget">
+                        <button class="roulette-btn" id="rouletteBtn">🎲 Talk Roulette</button>
+                        <div class="roulette-result" id="rouletteResult" hidden>
+                            <span class="roulette-label">You got:</span>
+                            <p class="roulette-title" id="rouletteTitle"></p>
+                            <p class="roulette-speaker" id="rouletteSpeaker"></p>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- ── Talks card ────────────────────────────────── -->
@@ -590,5 +592,6 @@
                   </div>
         </main>
         <script src="./seminario.js"></script>
+        <script src="./seminario-roulette.js"></script>
     </body>
 </html>
