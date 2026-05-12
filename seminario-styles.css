@@ -448,6 +448,13 @@ li::before {
     gap: 0.75rem;
 }
 
+.roulette-intro {
+    margin: 0 0 0.55rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
 .roulette-btn {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.95rem;
