@@ -354,6 +354,8 @@ li::before {
 .carousel {
     position: relative;
     width: 100%;
+    padding-top: 66.67%;   /* locks a stable 3:2 ratio — scales with width, never jumps */
+    height: 0;
     overflow: hidden;
     border-radius: 4px;
     margin-bottom: 1rem;
@@ -362,21 +364,18 @@ li::before {
     box-shadow: 0 8px 32px rgba(44, 36, 18, 0.45), 0 2px 8px rgba(44, 36, 18, 0.25);
 }
 
-/* All images stacked, invisible by default */
 .carousel-img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%;   /* responsive: scales with container */
     height: auto;
     display: block;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
-/* Active image is in normal flow — its natural size sets the container height */
 .carousel-img.active {
-    position: relative;
     opacity: 1;
 }
 
