@@ -340,3 +340,57 @@ li::before {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* ── Year filter ──────────────────────────────────── */
+
+.year-section {
+    display: none;
+}
+.year-section.active {
+    display: block;
+}
+
+/* Filter bar */
+.year-filter {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.4rem;
+}
+
+/* Buttons — mobile-first: large tap targets */
+.year-btn {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 0.55rem 1.2rem;
+    border-radius: 3px;
+    border: 1px solid #8a7050;
+    background: #f0ece4;
+    color: #5c4a2a;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.year-btn:hover,
+.year-btn:focus-visible {
+    background: #e8e0d0;
+    border-color: #5c4a2a;
+    outline: none;
+}
+
+.year-btn.active {
+    background: #5c4a2a;
+    color: #f5f0e8;
+    border-color: #5c4a2a;
+}
+
+/* Desktop: smaller, denser buttons */
+@media (min-width: 768px) {
+    .year-btn {
+        font-size: 0.88rem;
+        padding: 0.3rem 0.85rem;
+    }
+}
