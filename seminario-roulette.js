@@ -1,54 +1,65 @@
-const rouletteBtn    = document.getElementById('rouletteBtn');
-const rouletteResult = document.getElementById('rouletteResult');
-const rouletteTitle  = document.getElementById('rouletteTitle');
+const rouletteBtn     = document.getElementById('rouletteBtn');
+const rouletteResult  = document.getElementById('rouletteResult');
+const rouletteTitle   = document.getElementById('rouletteTitle');
 const rouletteSpeaker = document.getElementById('rouletteSpeaker');
 
-let lastHighlighted = null;
+const STEPS    = 20;   // number of ticks before landing
+const START_MS = 55;   // delay at first tick (fast)
+const END_MS   = 380;  // delay at last tick (slow)
+
+let spinning = false;
+
+function showTick(item) {
+    rouletteTitle.textContent   = item.querySelector('.talk-title')?.textContent  ?? '';
+    rouletteSpeaker.textContent = item.querySelector('.talk-speaker')?.textContent ?? '';
+
+    // Brief flash so each tick is visually distinct
+    rouletteTitle.classList.remove('roulette-tick');
+    void rouletteTitle.offsetWidth;
+    rouletteTitle.classList.add('roulette-tick');
+}
+
+function pickRandom(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
 
 rouletteBtn.addEventListener('click', () => {
+    if (spinning) return;
+
     const allItems = Array.from(document.querySelectorAll('.talk-item'));
     if (allItems.length === 0) return;
 
-    const picked = allItems[Math.floor(Math.random() * allItems.length)];
+    const winner = pickRandom(allItems);
+    spinning = true;
+    rouletteBtn.disabled = true;
 
-    // Switch to the correct year tab
-    const yearSection = picked.closest('.year-section');
-    if (yearSection) {
-        const year = yearSection.dataset.year;
-        document.querySelectorAll('.year-section').forEach(s => s.classList.remove('active'));
-        document.querySelectorAll('.year-btn').forEach(b => b.classList.remove('active'));
-        yearSection.classList.add('active');
-        const matchingBtn = document.querySelector(`.year-btn[data-year="${year}"]`);
-        if (matchingBtn) matchingBtn.classList.add('active');
-    }
-
-    // Remove previous highlight
-    if (lastHighlighted) {
-        lastHighlighted.classList.remove('roulette-highlight');
-    }
-
-    // Apply highlight to the parent <li>
-    const li = picked.closest('li');
-    if (li) {
-        // Force re-trigger animation if same element picked again
-        void li.offsetWidth;
-        li.classList.add('roulette-highlight');
-        lastHighlighted = li;
-
-        li.addEventListener('animationend', () => {
-            li.classList.remove('roulette-highlight');
-        }, { once: true });
-
-        li.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-
-    // Show result card
-    rouletteTitle.textContent   = picked.querySelector('.talk-title')?.textContent ?? '';
-    rouletteSpeaker.textContent = picked.querySelector('.talk-speaker')?.textContent ?? '';
+    // Show the card immediately so ticks are visible
     rouletteResult.hidden = false;
 
-    // Re-trigger fade-in animation
-    rouletteResult.style.animation = 'none';
-    void rouletteResult.offsetWidth;
-    rouletteResult.style.animation = '';
+    let step = 0;
+
+    function tick() {
+        const isLast = step === STEPS;
+        const current = isLast ? winner : pickRandom(allItems);
+
+        showTick(current);
+
+        if (isLast) {
+            // Landing: mark as settled and re-enable button
+            rouletteTitle.classList.remove('roulette-tick');
+            rouletteResult.classList.add('roulette-settled');
+            setTimeout(() => rouletteResult.classList.remove('roulette-settled'), 600);
+            spinning = false;
+            rouletteBtn.disabled = false;
+            return;
+        }
+
+        step++;
+        // Ease delay from START_MS to END_MS using a quadratic curve
+        const t = step / STEPS;
+        const delay = START_MS + (END_MS - START_MS) * (t * t);
+        setTimeout(tick, delay);
+    }
+
+    tick();
 });
