@@ -354,7 +354,8 @@ li::before {
 .carousel {
     position: relative;
     width: 100%;
-    padding-top: 66.67%;   /* locks a stable 3:2 ratio — scales with width, never jumps */
+    padding-top: 66.67%;
+
     height: 0;
     overflow: hidden;
     border-radius: 4px;
@@ -435,6 +436,14 @@ li::before {
     .year-btn {
         font-size: 0.88rem;
         padding: 0.3rem 0.85rem;
+    }
+
+    .carousel {
+        width: 90%;
+        padding-top: 40%;   /* 66.67% of 60% keeps the 3:2 ratio */
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
