@@ -354,12 +354,14 @@ li::before {
 .carousel {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;  /* matches photo ratio, responsive on all screens */
-    max-height: 260px;     /* cap so it stays compact on desktop */
+    height: 56vw;          /* scales with screen width, ~4:3 feel on mobile */
+    max-height: 260px;     /* cap on wider screens */
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 4px;
     margin-bottom: 1rem;
     background: #d8e0ec;
+    border: 1px solid #b8aa90;
+    box-shadow: 0 4px 16px rgba(44, 36, 18, 0.18), 0 1px 3px rgba(44, 36, 18, 0.10);
 }
 
 .carousel-img {
