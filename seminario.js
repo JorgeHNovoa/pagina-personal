@@ -64,3 +64,6 @@ buttons.forEach(btn => {
         if (target) target.classList.add('active');
     });
 });
+
+// Footer year
+document.getElementById('footerYear').textContent = new Date().getFullYear();
